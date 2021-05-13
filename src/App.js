@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Movies from './data.js';
 import MovieCard from './components/movieCard.js'
 import Header from './components/header.js'
+import './App.css'
 
 function App() {
   const [movieList, setMovieList] = useState(Movies);
@@ -19,13 +20,12 @@ function App() {
   return (
     <div className="page">
       <Header />
-      <section>
-
+      <div className="movie-list" >
+        <h2>Filmes</h2>
         {movieList.map((item) => (
-          <MovieCard titulo={item.title} src={item.backgroundImg} />
-
+          <MovieCard preco={item.price} titulo={item.title} src={item.backgroundImg} />
         ))}
-      </section>
+      </div>
     </div>
   );
 }
