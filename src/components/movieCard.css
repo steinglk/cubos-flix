@@ -6,19 +6,37 @@
     height: 300px;
     padding: 12px 8px 6px;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 40%);
-    transform: scale(0.8);
+    transform: scale(1);
     transition: 0.2s;
+    gap: 1rem;
     grid-template-areas: 
-    "fav ."
-    ". ."
-    "title stars"
-    "botao botao";
-    grid-template-rows: 1rem auto 1rem 1rem;
+    "fav . ."
+    ". . ."
+    "title . stars "
+    "botao botao ."
+    ". . .";
+    grid-template-rows: 1rem auto max-content 1rem 3px;
+    grid-template-columns: auto max-content auto;
 }
 
 .movieCard:hover {
-    transform: scale(1);
+    transform: scale(1.1);
 }
+
+.stared {
+    fill: #fff;
+}
+
+.favStar {
+    grid-area: fav
+}
+.favStar>svg {
+    cursor: pointer;
+}
+.favStar svg:not(:root) {
+    overflow: hidden;
+}
+
 
 .movieName {
     font-family: 'Manrope', sans-serif;
@@ -28,11 +46,35 @@
     font-size: 16px;
 }
 
-.favStar {
-    grid-area: fav
+
+.movieRate {
+    grid-area: stars;
+    display: flex;
+    flex-direction: row;
+    color: #FBCD6E;
+    font-size: 16px;
+    font-weight: 700;
+    align-items: center;
 }
 
+
+
 .movieCard button {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1;
+    justify-content: space-between;
+    align-items: center;
     grid-area: botao;
-    padding: 1rem;
+    padding: 0.3rem;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 2rem;
+    grid-row-end: -1;
+    border: unset;
+    background-color: #A785ED;
+    font-weight: 700;
+    font-size: 12px;
+    color: #EEE5FF;
 }
+

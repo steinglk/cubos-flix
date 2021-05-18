@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+
+.cupom {
+    grid-area: cupom;
+    width: auto;
+}
+
+.cupom h1 {
+    font-family: 'Quantico', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}

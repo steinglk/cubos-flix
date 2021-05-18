@@ -1,0 +1,10 @@
+.bag-container {
+    position: fixed;
+    top: 10rem;
+    right: 10rem;
+    width: 312px;
+    height: 460px;
+    background-color: blue;
+}
+
+@media()

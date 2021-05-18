@@ -41,8 +41,26 @@
 
 .header--search {
     display: flex;
-    width: 450px;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: #1d2226;
+    height: 3.5rem;
+    padding: 0.5rem;
+    border-radius: 2px;
+}
+
+.header--search * svg{
+    transform: scale(1.5);
+}
+
+.header--search form {
+    display: flex;
+    max-width: 450px;
+    justify-content: space-between;
+}
+
+.header--search input {
+    border: unset;
+    background-color: inherit;
 }
 
 .header--fav {

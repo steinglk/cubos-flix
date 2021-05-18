@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    font-family: 'Manrope', sans-serif;
 }
 
 
@@ -14,29 +14,52 @@ body {
     background-color: #1d2226;
 }
 
-.page {
+.App {
     display: grid;
     background-color: #1d2226;
     flex-direction: row;
     grid-template-areas: "header header header"
     ". cupom ."
+    ". topMovies ."
     ". movies .";
-    grid-template-columns: 3rem 58rem auto;
-    grid-template-rows: min-content min-content auto;
+    grid-template-columns: 5rem 58rem auto;
+    grid-template-rows: min-content 7.4rem max-content auto;
+    gap: 1rem;
 
+}
+
+.top-movie-list {
+    grid-area: topMovies;
+    display: grid;
+    grid-template-areas: "topListTitle topListTitle topListTitle topListTitle topListTitle"
+    "topMovie topMovie topMovie topMovie topMovie";
+    grid-template-rows: min-content, auto;
+    gap: 1.5rem;
+}
+.top-movie-title {
+    grid-area: topListTitle;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
 }
 
 .movie-list {
     grid-area: movies;
     display: grid;
-    grid-template-areas: "list-title list-title list-title list-title list-title"
+    grid-template-areas:
+    "list-title list-title list-title list-title list-title"
     "movie1 movie1 movie1 movie1 movie1";
     justify-items:first baseline;
     max-width: 937px;
     flex-wrap: wrap;
     max-height: min-content;
+    gap: 1.5rem;
 }
 
 .movie-list h2 {
     grid-area: list-title;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
 }
+
